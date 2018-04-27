@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Apr 20 14:20:00 2018
+# Process ID: 9108
+# Current directory: C:/Users/eray.muslu/BasicLED/BasicLED.runs/impl_1
+# Command line: vivado.exe -log part1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source part1.tcl -notrace
+# Log file: C:/Users/eray.muslu/BasicLED/BasicLED.runs/impl_1/part1.vdi
+# Journal file: C:/Users/eray.muslu/BasicLED/BasicLED.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source part1.tcl -notrace

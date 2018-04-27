@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="LEDBlink.vhd" path="C:\Users\eray.muslu\LED\LED.srcs\sources_1\new\LEDBlink.vhd"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
