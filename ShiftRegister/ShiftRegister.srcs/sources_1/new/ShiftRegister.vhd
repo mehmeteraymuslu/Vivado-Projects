@@ -21,36 +21,53 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity shift_sipo is
-    port (clk, reset, Sin : in std_logic;
+entity shift_reg is
+    port (
+    clk, reset, Sin : in std_logic;
+    S : in std_logic_vector(1 downto 0);
+    Pin : in std_logic_vector(5 downto 0);
     clock_out: out std_logic;
-    Pout : out std_logic_vector(6 downto 0));
-end shift_sipo;
+    Pout : out std_logic_vector(5 downto 0)
+    );
+end shift_reg;
 
-architecture exam of shift_sipo is
+architecture shiftreg of shift_reg is
     
-    signal temp: std_logic_vector(6 downto 0);
+    signal temp: std_logic_vector(5 downto 0);
     signal count: integer:=1;
-    signal tmp : std_logic := '0';
+    signal clk_tmp : std_logic := '0';
     
     begin
         process (clk)
             begin
+                --Stop Clock with Reset
                 if(reset='1') then
                 count<=1;
-                tmp<='0';
-                elsif(clk'event and clk='1') then
+                clk_tmp<='0';
+                --Clock Divider
+                elsif(rising_edge(clk)) then
                 count <=count+1;
                     if (count = 50000000) then
-                    tmp <= NOT tmp;
+                    clk_tmp <= NOT clk_tmp;
                     count <= 1;
                     end if;
                 end if;
-            clock_out <= tmp;
+            clock_out <= clk_tmp;
             
-            if (tmp'event and tmp='1') then
-            temp <= temp(5 downto 0)& Sin;
-            end if ;
+            --Universal Shift Register
+            if(reset='1') then
+            temp <= (others => '0'); --Reset Outputs
+            elsif (rising_edge(clk_tmp)) then
+                if(S="00") then --Hold
+                temp <= temp(5 downto 0);
+                elsif(S="01") then --Shitf Right
+                temp <= Sin & temp(5 downto 1);
+                elsif(S="10") then --Shift Left
+                temp <= temp(4 downto 0)& Sin;
+                elsif(S="11") then --Parallel Load
+                temp <= Pin(5 downto 0);
+                end if; 
+            end if;
         end process;
     Pout <= temp;
-end exam;
+end shiftreg;
