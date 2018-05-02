@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1525085680">
-  <File Type="PA-TCL" Name="shift_reg.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="shift_reg_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="shift_reg_reports.tcl"/>
-  <File Type="RDS-RDS" Name="shift_reg.vds"/>
-  <File Type="RDS-UTIL" Name="shift_reg_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="shift_reg_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="shift_reg.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="shift_reg_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="shift_reg_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1525258351">
+  <File Type="PA-TCL" Name="ShiftRegisterTop.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ShiftRegisterTop_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ShiftRegisterTop_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ShiftRegisterTop.vds"/>
+  <File Type="RDS-UTIL" Name="ShiftRegisterTop_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ShiftRegisterTop_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ShiftRegisterTop.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ShiftRegisterTop_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ShiftRegisterTop_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../ClockDivider/ClockDivider.srcs/sources_1/new/ClockDivider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ShiftRegister.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ShiftRegisterTop.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -19,7 +31,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="shift_reg"/>
+      <Option Name="TopModule" Val="ShiftRegisterTop"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

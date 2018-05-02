@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon Apr 30 13:55:19 2018
-# Process ID: 1432
+# Start of session at: Wed May  2 13:54:20 2018
+# Process ID: 7948
 # Current directory: C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.runs/impl_1
-# Command line: vivado.exe -log shift_reg.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source shift_reg.tcl -notrace
-# Log file: C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.runs/impl_1/shift_reg.vdi
+# Command line: vivado.exe -log ShiftRegisterTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ShiftRegisterTop.tcl -notrace
+# Log file: C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.runs/impl_1/ShiftRegisterTop.vdi
 # Journal file: C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source shift_reg.tcl -notrace
+source ShiftRegisterTop.tcl -notrace

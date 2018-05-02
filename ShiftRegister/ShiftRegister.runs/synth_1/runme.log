@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log shift_reg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shift_reg.tcl
+    with args -log ShiftRegisterTop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ShiftRegisterTop.tcl
 
 
 ****** Vivado v2017.4 (64-bit)
@@ -8,22 +8,31 @@
   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source shift_reg.tcl -notrace
-Command: synth_design -top shift_reg -part xc7z020clg484-1
+source ShiftRegisterTop.tcl -notrace
+Command: synth_design -top ShiftRegisterTop -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4180 
+INFO: Helper process launched with PID 2932 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 345.594 ; gain = 101.152
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 345.426 ; gain = 100.504
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'shift_reg' [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:34]
-WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:41]
-WARNING: [Synth 8-614] signal 'clk_tmp' is read in the process but is not in the sensitivity list [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'shift_reg' (1#1) [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'ShiftRegisterTop' [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegisterTop.vhd:39]
+	Parameter bitlength_top bound to: 6 - type: integer 
+	Parameter division_rate bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'C:/Users/eray.muslu/Desktop/Vivado Projects/ClockDivider/ClockDivider.srcs/sources_1/new/ClockDivider.vhd:24' bound to instance 'CLK_DVDR1' of component 'ClockDivider' [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegisterTop.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider' [C:/Users/eray.muslu/Desktop/Vivado Projects/ClockDivider/ClockDivider.srcs/sources_1/new/ClockDivider.vhd:33]
+	Parameter division_rate bound to: 100000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider' (1#1) [C:/Users/eray.muslu/Desktop/Vivado Projects/ClockDivider/ClockDivider.srcs/sources_1/new/ClockDivider.vhd:33]
+	Parameter bitlength bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'shift_reg' declared at 'C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:24' bound to instance 'SHFT_REGA' of component 'shift_reg' [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegisterTop.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'shift_reg' [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:38]
+	Parameter bitlength bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift_reg' (2#1) [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegister.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ShiftRegisterTop' (3#1) [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/sources_1/new/ShiftRegisterTop.vhd:39]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 397.605 ; gain = 153.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 397.250 ; gain = 152.328
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -33,7 +42,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 397.605 ; gain = 153.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 397.250 ; gain = 152.328
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -44,8 +53,65 @@ Parsing XDC File [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/Shif
 WARNING: [Vivado 12-584] No ports matched 'Pout[6]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:1]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:1]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[5]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[4]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[3]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[2]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[1]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[0]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'Pout[6]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:8]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[5]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[4]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[3]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[2]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[1]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pout[0]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clock_out'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clock_out'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sin'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:21]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'Direction'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:23]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:23]
@@ -53,35 +119,95 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'Direction'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:24]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:24]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[5]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[5]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[4]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[4]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[3]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[3]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[2]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[2]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[1]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[1]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[0]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin[0]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'S[1]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'S[1]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'S[0]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'S[0]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sin'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sin'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin_top[6]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Pin_top[6]'. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shift_reg_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/shift_reg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.srcs/constrs_2/new/My_Const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ShiftRegisterTop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ShiftRegisterTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 754.648 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 754.824 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_tmp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -111,18 +237,22 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module shift_reg 
+Module ClockDivider 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   3 Input      6 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
+Module shift_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      6 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -139,10 +269,10 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "clk_tmp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CLK_DVDR1/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CLK_DVDR1/clk_tmp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -154,13 +284,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 754.648 ; gain = 510.207
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 754.824 ; gain = 509.902
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -172,7 +302,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -196,7 +326,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -209,7 +339,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -221,25 +351,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -264,21 +394,23 @@ Report Cell Usage:
 |7     |FDCE   |    38|
 |8     |FDPE   |     1|
 |9     |IBUF   |    11|
-|10    |OBUF   |     7|
+|10    |OBUF   |     6|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   114|
-+------+---------+-------+------+
++------+------------+-------------+------+
+|      |Instance    |Module       |Cells |
++------+------------+-------------+------+
+|1     |top         |             |   113|
+|2     |  CLK_DVDR1 |ClockDivider |    82|
+|3     |  SHFT_REGA |shift_reg    |    13|
++------+------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 773.066 ; gain = 528.145
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 772.059 ; gain = 170.574
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 772.059 ; gain = 527.617
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 773.066 ; gain = 170.570
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 773.066 ; gain = 528.145
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -288,10 +420,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 6 Warnings, 4 Critical Warnings and 0 Errors encountered.
+24 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 772.070 ; gain = 540.625
-INFO: [Common 17-1381] The checkpoint 'C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.runs/synth_1/shift_reg.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file shift_reg_utilization_synth.rpt -pb shift_reg_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 772.070 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 30 13:55:13 2018...
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 773.066 ; gain = 541.281
+INFO: [Common 17-1381] The checkpoint 'C:/Users/eray.muslu/Desktop/Vivado Projects/ShiftRegister/ShiftRegister.runs/synth_1/ShiftRegisterTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ShiftRegisterTop_utilization_synth.rpt -pb ShiftRegisterTop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 773.066 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May  2 13:53:04 2018...

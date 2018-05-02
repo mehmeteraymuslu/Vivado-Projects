@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Mon Apr 30 17:27:44 2018
+| Date             : Wed May  2 09:35:31 2018
 | Host             : emuslu running 64-bit major release  (build 9200)
 | Command          : report_power -file knightrider_power_routed.rpt -pb knightrider_power_summary_routed.pb -rpx knightrider_power_routed.rpx
 | Design           : knightrider
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.988        |
+| Total On-Chip Power (W)  | 0.699        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.871        |
-| Device Static (W)        | 0.117        |
+| Dynamic (W)              | 0.587        |
+| Device Static (W)        | 0.112        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 73.6         |
-| Junction Temperature (C) | 36.4         |
+| Max Ambient (C)          | 76.9         |
+| Junction Temperature (C) | 33.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.486 |      312 |       --- |             --- |
-|   LUT as Logic |     0.441 |      166 |     53200 |            0.31 |
-|   CARRY4       |     0.022 |       32 |     13300 |            0.24 |
+| Slice Logic    |     0.302 |      299 |       --- |             --- |
+|   LUT as Logic |     0.257 |      168 |     53200 |            0.32 |
+|   CARRY4       |     0.022 |       28 |     13300 |            0.21 |
 |   Register     |     0.017 |       73 |    106400 |            0.07 |
 |   BUFG         |     0.006 |        2 |        32 |            6.25 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.381 |      206 |       --- |             --- |
+| Signals        |     0.280 |      222 |       --- |             --- |
 | I/O            |     0.004 |       10 |       200 |            5.00 |
-| Static Power   |     0.117 |          |           |                 |
-| Total          |     0.988 |          |           |                 |
+| Static Power   |     0.112 |          |           |                 |
+| Total          |     0.699 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,8 +71,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.882 |       0.871 |      0.011 |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
+| Vccint    |       1.000 |     0.596 |       0.587 |      0.010 |
+| Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -84,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.023 |       0.000 |      0.023 |
+| Vccpint   |       1.000 |     0.021 |       0.000 |      0.021 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,7 +145,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| knightrider |     0.871 |
+| knightrider |     0.587 |
 +-------------+-----------+
 
 

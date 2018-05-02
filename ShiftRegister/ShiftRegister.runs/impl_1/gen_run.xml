@@ -1,71 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1525085680">
-  <File Type="PWROPT-DCP" Name="shift_reg_pwropt.dcp"/>
-  <File Type="ROUTE-PWR" Name="shift_reg_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="shift_reg.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="shift_reg_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="shift_reg_reports.tcl"/>
-  <File Type="BG-DRC" Name="shift_reg.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="shift_reg_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="shift_reg_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="shift_reg.hwdef"/>
-  <File Type="OPT-DCP" Name="shift_reg_opt.dcp"/>
-  <File Type="OPT-DRC" Name="shift_reg_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="shift_reg_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="shift_reg_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="shift_reg_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="shift_reg_placed.dcp"/>
-  <File Type="PLACE-IO" Name="shift_reg_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="shift_reg_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="shift_reg_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="shift_reg_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="shift_reg_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="shift_reg_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="shift_reg_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="shift_reg_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="shift_reg_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="shift_reg_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="shift_reg_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="shift_reg_drc_physopted.rpt"/>
-  <File Type="BG-BIT" Name="shift_reg.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="shift_reg_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="shift_reg_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="shift_reg_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="shift_reg_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="shift_reg_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="shift_reg_drc_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="shift_reg.msk"/>
-  <File Type="ROUTE-DRC-RPX" Name="shift_reg_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="shift_reg.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="shift_reg_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="shift_reg.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="shift_reg_methodology_drc_routed.rpx"/>
-  <File Type="BG-BIN" Name="shift_reg.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="shift_reg_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="shift_reg_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="shift_reg_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="shift_reg_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="shift_reg_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="shift_reg_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="shift_reg_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="shift_reg_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="shift_reg.vdi"/>
-  <File Type="ROUTE-CLK" Name="shift_reg_clock_utilization_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="shift_reg_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="shift_reg_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="shift_reg_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="shift_reg_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="shift_reg_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="shift_reg.nky"/>
-  <File Type="BITSTR-BMM" Name="shift_reg_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="shift_reg.mmi"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1525258454">
+  <File Type="PWROPT-DCP" Name="ShiftRegisterTop_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="ShiftRegisterTop_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ShiftRegisterTop.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="ShiftRegisterTop_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ShiftRegisterTop_reports.tcl"/>
+  <File Type="BG-DRC" Name="ShiftRegisterTop.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ShiftRegisterTop_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="ShiftRegisterTop_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="ShiftRegisterTop.hwdef"/>
+  <File Type="OPT-DCP" Name="ShiftRegisterTop_opt.dcp"/>
+  <File Type="OPT-DRC" Name="ShiftRegisterTop_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="ShiftRegisterTop_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="ShiftRegisterTop_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="ShiftRegisterTop_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ShiftRegisterTop_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ShiftRegisterTop_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ShiftRegisterTop_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ShiftRegisterTop_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ShiftRegisterTop_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ShiftRegisterTop_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ShiftRegisterTop_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ShiftRegisterTop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="ShiftRegisterTop_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ShiftRegisterTop_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ShiftRegisterTop_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ShiftRegisterTop_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ShiftRegisterTop_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="ShiftRegisterTop.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="ShiftRegisterTop_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ShiftRegisterTop_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ShiftRegisterTop_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ShiftRegisterTop_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ShiftRegisterTop_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ShiftRegisterTop_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="ShiftRegisterTop.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="ShiftRegisterTop_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="ShiftRegisterTop.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ShiftRegisterTop_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="ShiftRegisterTop.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ShiftRegisterTop_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="ShiftRegisterTop.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ShiftRegisterTop_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ShiftRegisterTop_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ShiftRegisterTop_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ShiftRegisterTop_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ShiftRegisterTop_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ShiftRegisterTop_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ShiftRegisterTop_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="ShiftRegisterTop_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="ShiftRegisterTop.vdi"/>
+  <File Type="ROUTE-CLK" Name="ShiftRegisterTop_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ShiftRegisterTop_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ShiftRegisterTop_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ShiftRegisterTop_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ShiftRegisterTop_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ShiftRegisterTop_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="ShiftRegisterTop.nky"/>
+  <File Type="BITSTR-BMM" Name="ShiftRegisterTop_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="ShiftRegisterTop.mmi"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="shift_reg.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="shift_reg.sysdef"/>
+  <File Type="BITSTR-LTX" Name="ShiftRegisterTop.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ShiftRegisterTop.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../ClockDivider/ClockDivider.srcs/sources_1/new/ClockDivider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ShiftRegister.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ShiftRegisterTop.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -73,7 +85,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="shift_reg"/>
+      <Option Name="TopModule" Val="ShiftRegisterTop"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

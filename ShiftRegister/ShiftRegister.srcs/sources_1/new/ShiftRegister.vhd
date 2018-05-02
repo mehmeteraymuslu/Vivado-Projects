@@ -22,50 +22,38 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity shift_reg is
+    generic(
+    bitlength : integer
+    );
     port (
-    clk, reset, Sin : in std_logic;
-    S : in std_logic_vector(1 downto 0);
-    Pin : in std_logic_vector(5 downto 0);
-    clock_out: out std_logic;
-    Pout : out std_logic_vector(5 downto 0)
+    clk : in std_logic; --Clock Input
+    reset : in std_logic; --Reset
+    Sin : in std_logic; --Serial Input
+    S : in std_logic_vector(1 downto 0); --Selection for Mod
+    Pin : in std_logic_vector((bitlength-1) downto 0); --Parallel Input
+    Pout : out std_logic_vector((bitlength-1) downto 0) --Parallel Output
     );
 end shift_reg;
 
 architecture shiftreg of shift_reg is
     
-    signal temp: std_logic_vector(5 downto 0);
-    signal count: integer:=1;
-    signal clk_tmp : std_logic := '0';
-    
+    signal temp: std_logic_vector((bitlength-1) downto 0);
+
     begin
-        process (clk)
+        process (clk, reset, Sin, S, Pin)
             begin
-                --Stop Clock with Reset
-                if(reset='1') then
-                count<=1;
-                clk_tmp<='0';
-                --Clock Divider
-                elsif(rising_edge(clk)) then
-                count <=count+1;
-                    if (count = 50000000) then
-                    clk_tmp <= NOT clk_tmp;
-                    count <= 1;
-                    end if;
-                end if;
-            clock_out <= clk_tmp;
-            
             --Universal Shift Register
             if(reset='1') then
             temp <= (others => '0'); --Reset Outputs
-            elsif (rising_edge(clk_tmp)) then
+            elsif (rising_edge(clk)) then
                 if(S="00") then --Hold
-                temp <= temp(5 downto 0);
+                temp <= temp((bitlength-1) downto 0);
                 elsif(S="01") then --Shitf Right
-                temp <= Sin & temp(5 downto 1);
+                temp <= Sin & temp((bitlength-1) downto 1);
                 elsif(S="10") then --Shift Left
-                temp <= temp(4 downto 0)& Sin;
+                temp <= temp((bitlength-2) downto 0)& Sin;
                 elsif(S="11") then --Parallel Load
-                temp <= Pin(5 downto 0);
+                temp <= Pin((bitlength-1) downto 0);
                 end if; 
             end if;
         end process;

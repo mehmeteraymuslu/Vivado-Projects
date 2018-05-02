@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed May  2 16:45:44 2018
+# Process ID: 10488
+# Current directory: C:/Users/eray.muslu/Desktop/Vivado Projects/KnightRiderWShiftReg/KnightRiderWShiftReg.runs/impl_1
+# Command line: vivado.exe -log KnightRiderTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source KnightRiderTop.tcl -notrace
+# Log file: C:/Users/eray.muslu/Desktop/Vivado Projects/KnightRiderWShiftReg/KnightRiderWShiftReg.runs/impl_1/KnightRiderTop.vdi
+# Journal file: C:/Users/eray.muslu/Desktop/Vivado Projects/KnightRiderWShiftReg/KnightRiderWShiftReg.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source KnightRiderTop.tcl -notrace

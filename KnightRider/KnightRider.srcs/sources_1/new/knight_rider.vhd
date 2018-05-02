@@ -47,7 +47,7 @@ architecture car of knightrider is
                 --Clock Divider
                 elsif(rising_edge(clk)) then
                 count <=count+1;
-                    if (count = 10000000) then
+                    if (count = 5000000) then
                     clk_tmp <= NOT clk_tmp;
                     count <= 1;
                     end if;
@@ -66,8 +66,20 @@ architecture car of knightrider is
                 elsif (16>counter and counter>8) then
                     temp <= temp(0) & temp(7 downto 1);
                     counter <= counter + 1;
-                elsif (counter>=16) then
-                    temp <= temp(6 downto 0) & temp(7);
+                elsif (counter=16) then
+                    temp <= (others =>'1');
+                    counter <= counter + 1;
+                elsif (counter=17) then
+                    temp <= (others =>'0');
+                    counter <= counter + 1;
+                elsif (counter=18) then
+                    temp <= (others =>'1');
+                    counter <= counter + 1;
+                elsif (counter=19) then
+                    temp <= (others =>'0');
+                    counter <= counter + 1;
+                elsif (counter=20) then
+                    temp <= "00000001";
                     counter <= 2;
                 end if;
             end if;
