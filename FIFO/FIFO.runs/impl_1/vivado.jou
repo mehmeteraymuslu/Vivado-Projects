@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri May  4 16:51:22 2018
-# Process ID: 8664
+# Start of session at: Fri May  4 17:27:25 2018
+# Process ID: 4308
 # Current directory: C:/Users/eray.muslu/Desktop/Vivado Projects/FIFO/FIFO.runs/impl_1
 # Command line: vivado.exe -log FIFOTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source FIFOTop.tcl -notrace
 # Log file: C:/Users/eray.muslu/Desktop/Vivado Projects/FIFO/FIFO.runs/impl_1/FIFOTop.vdi

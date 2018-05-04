@@ -48,12 +48,13 @@ architecture memory of FIFO is
 begin
     mem_operations : process(clk, write, Pin, reset)
     begin
-        if(rising_edge(clk)) then
-            if(reset='1') then
-                MEM <= (others => '0');
-                Pout <= (others => '0');
-                temp <= (others => '0');
-            elsif(write='1') then
+        if(reset='1') then
+            MEM <= (others => '0');
+            Pout <= (others => '0');
+            temp <= (others => '0');
+        elsif(rising_edge(clk)) then
+            temp <= (others => '0');
+            if(write='1') then
                 temp((bit_width*(memory_depth-1) -1) downto 0) <= MEM((bit_width*(memory_depth-1) -1) downto 0);
                 MEM((bit_width*memory_depth -1) downto bit_width) <= temp((bit_width*(memory_depth-1) -1) downto 0);
                 MEM((bit_width -1) downto 0) <= Pin;

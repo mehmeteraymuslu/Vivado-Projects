@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri May  4 16:52:11 2018
+| Date             : Fri May  4 17:28:13 2018
 | Host             : emuslu running 64-bit major release  (build 9200)
 | Command          : report_power -file FIFOTop_power_routed.rpt -pb FIFOTop_power_summary_routed.pb -rpx FIFOTop_power_routed.rpx
 | Design           : FIFOTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.650        |
+| Total On-Chip Power (W)  | 0.697        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.539        |
-| Device Static (W)        | 0.111        |
+| Dynamic (W)              | 0.585        |
+| Device Static (W)        | 0.112        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 77.5         |
-| Junction Temperature (C) | 32.5         |
+| Max Ambient (C)          | 77.0         |
+| Junction Temperature (C) | 33.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.258 |      340 |       --- |             --- |
-|   LUT as Logic |     0.218 |      105 |     53200 |            0.20 |
+| Slice Logic    |     0.304 |      341 |       --- |             --- |
+|   LUT as Logic |     0.264 |      107 |     53200 |            0.20 |
 |   CARRY4       |     0.019 |        8 |     13300 |            0.06 |
 |   Register     |     0.015 |      161 |    106400 |            0.15 |
 |   BUFG         |     0.006 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.252 |      219 |       --- |             --- |
+|   Others       |     0.000 |        3 |       --- |             --- |
+| Signals        |     0.253 |      219 |       --- |             --- |
 | I/O            |     0.028 |       13 |       200 |            6.50 |
-| Static Power   |     0.111 |          |           |                 |
-| Total          |     0.650 |          |           |                 |
+| Static Power   |     0.112 |          |           |                 |
+| Total          |     0.697 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.548 |       0.539 |      0.009 |
+| Vccint    |       1.000 |     0.594 |       0.585 |      0.010 |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -84,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.020 |       0.000 |      0.020 |
+| Vccpint   |       1.000 |     0.021 |       0.000 |      0.021 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,9 +145,9 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| FIFOTop     |     0.539 |
-|   CLK_DVDR1 |     0.312 |
-|   MEMO1     |     0.122 |
+| FIFOTop     |     0.585 |
+|   CLK_DVDR1 |     0.307 |
+|   MEMO1     |     0.150 |
 +-------------+-----------+
 
 
