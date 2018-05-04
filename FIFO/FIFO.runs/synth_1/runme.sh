@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log FIFO.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIFO.tcl
+EAStep vivado -log FIFOTop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIFOTop.tcl
