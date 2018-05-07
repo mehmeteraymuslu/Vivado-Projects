@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eray.muslu/Desktop/Vivado Projects/MedianFilterBMP/MedianFilterBMP.srcs/sources_1/new/MedianFilterBMP.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MedianFilterBMP
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eray.muslu/Desktop/Vivado Projects/MedianFilterBMP/MedianFilterBMP.srcs/sim_1/new/testMedianFilter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testMedianFilter
+ERROR: [VRFC 10-1491] unexpected EOF [C:/Users/eray.muslu/Desktop/Vivado Projects/MedianFilterBMP/MedianFilterBMP.srcs/sim_1/new/testMedianFilter.vhd:157]
+INFO: [VRFC 10-240] VHDL file C:/Users/eray.muslu/Desktop/Vivado Projects/MedianFilterBMP/MedianFilterBMP.srcs/sim_1/new/testMedianFilter.vhd ignored due to errors

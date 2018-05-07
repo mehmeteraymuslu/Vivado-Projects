@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ClockDivider.srcs/sources_1/new/ClockDivider.vhd" \
+"../../../../ClockDivider.srcs/sources_1/new/ClockDividerTop.vhd" \
+
+# Do not sort compile order
+nosort

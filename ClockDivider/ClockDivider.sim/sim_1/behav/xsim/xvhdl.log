@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eray.muslu/Desktop/Vivado Projects/ClockDivider/ClockDivider.srcs/sources_1/new/ClockDivider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ClockDivider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eray.muslu/Desktop/Vivado Projects/ClockDivider/ClockDivider.srcs/sources_1/new/ClockDividerTop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ClockDividerTop

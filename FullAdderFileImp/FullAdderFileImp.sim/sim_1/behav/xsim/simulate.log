@@ -1,0 +1,7 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+ERROR: File input_vectors.txt is not open. Cannot call endfile on it
+Time: 0 ps  Iteration: 0  Process: /example_file_io_tb/line__81
+  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdderFileImp/FullAdderFileImp.srcs/sim_1/new/example_file_io_tb.vhd
+
+HDL Line: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdderFileImp/FullAdderFileImp.srcs/sim_1/new/example_file_io_tb.vhd:93

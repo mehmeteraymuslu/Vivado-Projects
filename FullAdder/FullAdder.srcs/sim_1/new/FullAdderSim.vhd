@@ -49,6 +49,12 @@ signal c_out_expected		: std_logic;
 signal inputs 				: std_logic_vector(2 downto 0);
 signal outputs				: std_logic_vector(1 downto 0);
 
+-----------------------------------------------------------------------------
+-- Testbench Internal Signals
+-----------------------------------------------------------------------------
+file file_VECTORS : text;
+file file_RESULTS : text;
+
 begin
 	dev_to_test:	Full_Adder_2 port map (
 		S => s_out, C_out => c_out,
