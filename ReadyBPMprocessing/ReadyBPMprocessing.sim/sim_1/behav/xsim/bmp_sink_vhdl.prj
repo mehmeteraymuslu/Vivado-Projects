@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Bitmap-VHDL-Package/rtl/bmp_pkg.vhd" \
+"../../../../../Bitmap-VHDL-Package/rtl/bmp_sink.vhd" \
+
+# Do not sort compile order
+nosort

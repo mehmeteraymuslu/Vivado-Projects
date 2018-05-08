@@ -112,7 +112,7 @@ begin
             read(v_ILINE, v_ADD_TERM2);
             read(v_ILINE, v_SPACE);           -- read in the space character
             read(v_ILINE, v_ADD_TERM3);
-            
+
 
               -- Pass the variable to a signal to allow the ripple-carry to use it
               y_in <= v_ADD_TERM1;

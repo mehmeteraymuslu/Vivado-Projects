@@ -26,13 +26,17 @@ use std.textio.all;
 use ieee.std_logic_textio.all;
 
 entity testMedianFilter is
---  Port ( );
+  Port (
+  file_in : in std_logic_vector;
+  file_out : out std_logic_vector
+  );
 end testMedianFilter;
 
 architecture test of testMedianFilter is
 
 
     procedure bmp_read is
+
         variable inline: line;
         variable b:character;
         variable g:character;
@@ -51,10 +55,11 @@ architecture test of testMedianFilter is
         end loop;
     
         file_close(file_bmp);
+
+
     end bmp_read;
 
-
---end test;
+end test;
 
 
 -----------------------------------------------------------------------------------------
