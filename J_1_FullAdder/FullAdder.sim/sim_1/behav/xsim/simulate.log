@@ -1,0 +1,38 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 80 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 160 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 240 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 320 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 400 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 480 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 560 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 640 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 720 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 800 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 880 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd
+ERROR FA test failed at sum: x = 1, y = 1, c_in = 1
+Warning: The Full Adder is broken.
+Time: 960 ns  Iteration: 0  Process: /test_Full_Adder_2/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/FullAdder/FullAdder.srcs/sim_1/new/test_Full_Adder_2.vhd

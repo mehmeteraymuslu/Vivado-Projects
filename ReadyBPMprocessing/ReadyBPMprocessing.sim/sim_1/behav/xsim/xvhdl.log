@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eray.muslu/Desktop/Vivado Projects/Bitmap-VHDL-Package/rtl/bmp_sink.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bmp_sink
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eray.muslu/Desktop/Vivado Projects/Bitmap-VHDL-Package/sim/bmp_source_sink_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bmp_source_sink_TB

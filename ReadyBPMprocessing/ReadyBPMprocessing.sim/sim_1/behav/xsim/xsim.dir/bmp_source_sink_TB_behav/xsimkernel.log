@@ -1,7 +1,7 @@
-Running: xsim.dir/bmp_source_sink_TB_behav/xsimk.exe -simmode gui -wdb bmp_source_sink_TB_behav.wdb -simrunnum 0 -socket 50726
+Running: xsim.dir/bmp_source_sink_TB_behav/xsimk.exe -simmode gui -wdb bmp_source_sink_TB_behav.wdb -simrunnum 0 -socket 61790
 Design successfully loaded
-Design Loading Memory Usage: 6604 KB (Peak: 6604 KB)
+Design Loading Memory Usage: 6644 KB (Peak: 6644 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 49280 KB (Peak: 49280 KB)
-Simulation CPU Usage: 93 ms
+Simulation Memory Usage: 49160 KB (Peak: 49160 KB)
+Simulation CPU Usage: 108 ms

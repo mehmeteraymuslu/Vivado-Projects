@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../J_3_Universal_Shift_Register.srcs/sim_1/new/Sim_Mem_Init.vhd" \
+"../../../../J_3_Universal_Shift_Register.srcs/sources_1/new/USR.vhd" \
+"../../../../J_3_Universal_Shift_Register.srcs/sim_1/new/test_USR.vhd" \
+
+# Do not sort compile order
+nosort
