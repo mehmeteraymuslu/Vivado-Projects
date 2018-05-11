@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 10 09:54:49 2018
+# Process ID: 8096
+# Current directory: C:/Users/eray.muslu/Desktop/Vivado Projects/J_7_RC_Servo/J_7_RC_Servo.runs/synth_1
+# Command line: vivado.exe -log RC_servo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RC_servo.tcl
+# Log file: C:/Users/eray.muslu/Desktop/Vivado Projects/J_7_RC_Servo/J_7_RC_Servo.runs/synth_1/RC_servo.vds
+# Journal file: C:/Users/eray.muslu/Desktop/Vivado Projects/J_7_RC_Servo/J_7_RC_Servo.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source RC_servo.tcl -notrace

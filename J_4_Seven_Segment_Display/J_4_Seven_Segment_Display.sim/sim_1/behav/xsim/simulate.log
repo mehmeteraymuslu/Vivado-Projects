@@ -1,0 +1,14 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Note: SUCCESS!!!  hex_to_7_seg Test Completed
+Time: 160 ns  Iteration: 0  Process: /test_Hex_to_7_Seg/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/J_4_Seven_Segment_Display/J_4_Seven_Segment_Display.srcs/sim_1/new/test_Hex_to_7_Seg.vhd
+Note: SUCCESS!!!  hex_to_7_seg Test Completed
+Time: 320 ns  Iteration: 0  Process: /test_Hex_to_7_Seg/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/J_4_Seven_Segment_Display/J_4_Seven_Segment_Display.srcs/sim_1/new/test_Hex_to_7_Seg.vhd
+Note: SUCCESS!!!  hex_to_7_seg Test Completed
+Time: 480 ns  Iteration: 0  Process: /test_Hex_to_7_Seg/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/J_4_Seven_Segment_Display/J_4_Seven_Segment_Display.srcs/sim_1/new/test_Hex_to_7_Seg.vhd
+Note: SUCCESS!!!  hex_to_7_seg Test Completed
+Time: 640 ns  Iteration: 0  Process: /test_Hex_to_7_Seg/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/J_4_Seven_Segment_Display/J_4_Seven_Segment_Display.srcs/sim_1/new/test_Hex_to_7_Seg.vhd
+Note: SUCCESS!!!  hex_to_7_seg Test Completed
+Time: 800 ns  Iteration: 0  Process: /test_Hex_to_7_Seg/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/J_4_Seven_Segment_Display/J_4_Seven_Segment_Display.srcs/sim_1/new/test_Hex_to_7_Seg.vhd
+Note: SUCCESS!!!  hex_to_7_seg Test Completed
+Time: 960 ns  Iteration: 0  Process: /test_Hex_to_7_Seg/stimulus  File: C:/Users/eray.muslu/Desktop/Vivado Projects/J_4_Seven_Segment_Display/J_4_Seven_Segment_Display.srcs/sim_1/new/test_Hex_to_7_Seg.vhd
