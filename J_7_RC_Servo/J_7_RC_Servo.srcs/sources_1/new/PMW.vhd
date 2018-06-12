@@ -30,7 +30,7 @@ use IEEE.numeric_std.all;
 entity PWM is
 Generic (
     bit_depth    : integer := 8;
-    input_clk    : integer := 50000000; -- 50MHz
+    input_clk    : integer := 100000000; -- 50MHz
     freq        : integer := 50); -- 50Hz
 Port (
     pwm_out     : out std_logic;

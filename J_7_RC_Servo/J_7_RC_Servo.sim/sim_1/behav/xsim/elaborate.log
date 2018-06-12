@@ -13,6 +13,6 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.math_real
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_textio
-Compiling architecture behavior of entity xil_defaultlib.PWM [\PWM(bit_depth=4,input_clk=400,f...]
+Compiling architecture behavior of entity xil_defaultlib.PWM [\PWM(bit_depth=4,input_clk=20,fr...]
 Compiling architecture test of entity xil_defaultlib.test_pwm
 Built simulation snapshot test_PWM_behav

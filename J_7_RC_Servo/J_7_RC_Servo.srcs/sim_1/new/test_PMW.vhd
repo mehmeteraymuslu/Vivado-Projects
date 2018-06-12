@@ -46,8 +46,8 @@ end component;
 
 -- Simulation constants
 constant bit_depth			: integer := 4;
-constant input_clk			: integer := 400;
-constant freq				: integer := 5;
+constant input_clk			: integer := 20;--400
+constant freq				: integer := 1;--5
 
 -- Simulation signals
 signal pwm_out_sim					: std_logic := '0';
