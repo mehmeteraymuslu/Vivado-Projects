@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+<style>
+    .show{
+        font-size: 60px;
+        color: white;
+        background-color: red;
+    }
+</style>
+
+</head>
+
+<body>
+        <img src='img-1.jpg' id='img' width="250">
+        <button type="button" id='btn'>Click Me</button>
+        <div id="main">I am div with ID of main
+        <h1>I am heading inside div</h1>
+    </div>
+    <div class="main">I am div with class of main</div>
+    <p>I am simple paragraph</p>
+    <p>I am simple paragraph</p>
+    <ul>
+        <li>list item nr 1</li>
+        <li>list item nr 2</li>
+        <li class="list-item">list item nr 3</li>
+        <li>list item nr 4</li>
+        <li class="list-item">list item nr 5</li>
+    </ul>
+
+
+    <script>
+        //document.body.style.backgroundColor = 'red';
+        
+        // let main = document.getElementById('main');
+        // main.style.backgroundColor = 'green';
+
+        // let para = document.getElementsByTagName('p')[0];
+        // para.style.backgroundColor = 'yellow';
+        
+        // let listItem = document.getElementsByClassName('list-item')[1];
+        // listItem.style.backgroundColor = 'blue';
+
+        // let query = document.querySelector('li');
+        // // query.classList.add('show');
+        // // query.classList.remove('show');
+
+        // let btn = document.getElementById('btn');
+
+        // btn.addEventListener('click',function(){
+        //     query.classList.toggle('show');
+        // })
+
+        // query.style.backgroundColor = 'pink';
+        // query.style.fontSize = "40px";
+        // query.style.color = 'white';
+
+        // let all = document.querySelectorAll('li')[3];
+        // all.style.backgroundColor = 'brown';
+
+        // let item = document.getElementById('main');
+        // item.textContent = "<h1 class='show'>Hey I'm back<h1>";
+        // item.innerText = "Hello John";
+        // item.innerHTML = "<h1 class='show'>Hey I'm back<h1>";
+
+        let img = document.getElementById('img');
+        // let result = img.getAttribute('src');
+        // img.setAttribute('src','img-2.jpg');
+
+        // console.log(result);
+
+         let btn = document.getElementById('btn');
+
+        // btn.onclick = changeIMG;
+        
+        // function changeIMG(){
+        //     img.setAttribute('src','img-2.jpg');
+        // }
+
+        let result = false;
+
+        img.addEventListener('mouseover', changeIMG, false);
+
+        function changeIMG(){
+            
+            if(result){
+                img.setAttribute('src','img-1.jpg');
+                result = false;
+            }
+            else{
+                img.setAttribute('src','img-2.jpg');
+                result = true;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
