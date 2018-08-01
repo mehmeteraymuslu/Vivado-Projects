@@ -12,7 +12,7 @@ const clear = document.querySelector('.displayItems-clear');
 submit.addEventListener('click', addItem);
 document.addEventListener('DOMContentLoaded', displayStorage);
 clear.addEventListener('click', removeItems);
-
+list.addEventListener('click', removeSingleItem);
 
 //function
 
@@ -99,7 +99,7 @@ function displayStorage(){
     }
 }
 
-//remove all items
+// remove all items
 function removeItems(){
     //delete from local storage
     localStorage.removeItem('groceryList');
@@ -115,4 +115,27 @@ function removeItems(){
         showAction(displayItemsAction,'No more items to delete', true);
     }
 }
+
+// remove single item
+
+function removeSingleItem(event){
+    event.preventDefault();
+
+    // console.log(event.target);
+    // console.log(event.target.parentElement);
+
+    let link = event.target.parentElement;
+    if(link.classList.contains('grocery-item__link')){
+        let text = link.previousElementSibling.innerHTML;
+        let groceryItem = event.target.parentElement.parentElement;
+        // remove from the list
+
+        list.removeChild(groceryItem);
+        showAction(displayItemsAction,`${text} removed from the list`, true);
+        // remove from the local storage
+    }
+
+}
+
+
 
