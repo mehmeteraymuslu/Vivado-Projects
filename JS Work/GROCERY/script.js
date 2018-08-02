@@ -133,7 +133,25 @@ function removeSingleItem(event){
         list.removeChild(groceryItem);
         showAction(displayItemsAction,`${text} removed from the list`, true);
         // remove from the local storage
+        editStorage(text);
     }
+
+}
+
+// edit storage
+
+function editStorage(item){
+    let groceryItems = JSON.parse(localStorage.getItem('groceryList'));
+    // console.log(groceryItems);
+
+    // console.log(groceryItems);
+
+    let index = groceryItems.indexOf(item);
+
+    groceryItems.splice(index,1);    
+    // console.log(groceryItems);
+    localStorage.removeItem('groceryList');
+    localStorage.setItem('groceryList', JSON.stringify(groceryItems));
 
 }
 
